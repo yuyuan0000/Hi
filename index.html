@@ -46,7 +46,7 @@
       line-height: 1.6;
     }
 
-    .countdown {
+    .note {
       font-size: 1rem;
       color: #ff80ab;
       margin-top: 0.5rem;
@@ -73,27 +73,11 @@
   <h1>Hello, Friend</h1>
   <p>Nice to meet you!</p>
   <p>Life is beautiful, and I hope to share its wonders with you!</p>
-  <p class="countdown" id="countdownText">Redirecting in 3 seconds...</p>
+  <p class="note">Click the button below to send a message</p>
 
   <button onclick="window.location.href='https://wa.me/85259053792';">
     Send Message
   </button>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let seconds = 3;
-      const countdownText = document.getElementById("countdownText");
-      const interval = setInterval(() => {
-        seconds--;
-        if (seconds > 0) {
-          countdownText.textContent = `Redirecting in ${seconds} seconds...`;
-        } else {
-          clearInterval(interval);
-          countdownText.textContent = "Redirecting...";
-          window.location.href = "https://wa.me/85259053792";
-        }
-      }, 1000);
-    });
-  </script>
 </body>
 </html>
+
